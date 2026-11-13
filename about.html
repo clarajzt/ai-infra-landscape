@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>About · AI Infrastructure Landscape</title>
+  <meta name="description" content="How the AI Infrastructure Landscape is built: the eight-layer stack, where the data comes from, how to read the numbers, and the downloadable data.">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/atlas.css?v=f8e5d7bb700b">
+  <link rel="stylesheet" href="css/site.css?v=f8e5d7bb700b">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./"><img class="brand-icon" src="assets/icon.svg" alt=""><span>AI INFRA LANDSCAPE</span></a>
+      <nav class="top-tabs" aria-label="Main navigation">
+        <a href="./#view=market">Market overview</a>
+        <a href="./#view=companies">Company map</a>
+        <a href="./#view=research">Evolution and opportunities</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+      </nav>
+      <div class="top-actions"><span>Data as of 2026-11-01</span><a class="btn" href="https://github.com/clarajzt/ai-infra-landscape" rel="noopener">GitHub ↗</a></div>
+    </div>
+  </header>
+
+  <main class="about">
+    <h1>About this map</h1>
+    <p class="lede">An independent research map of the AI infrastructure stack, from chips and GPU clouds to agent runtimes, evals, identity and payments. It is built to show where capital, revenue and consolidation are moving, segment by segment, with every figure traceable to a public source.</p>
+
+    <div class="stats">
+      <div class="stat"><b>638</b><span>companies and products</span></div>
+      <div class="stat"><b>24</b><span>segments in 8 layers</span></div>
+      <div class="stat"><b>720</b><span>sourced observations</span></div>
+      <div class="stat"><b>2026-11-01</b><span>data cut-off</span></div>
+    </div>
+    <p><a class="btn primary cta" href="./">Open the map →</a></p>
+
+    <h2>How to use it</h2>
+    <ul>
+      <li><b>Market overview</b> shows the stack layer by layer with headline funding, revenue, valuation and M&amp;A, a landscape of leading companies, and a yearly trend. Every number opens the observations behind it.</li>
+      <li><b>Company map</b> lists every company and product with country, segment, product, and its latest public figures. Click a company for its full history.</li>
+      <li><b>Evolution and opportunities</b> sets out how each generation of model capability moved the scarce resource, and where the investable seams are.</li>
+      <li>Filter by year, country, layer and segment, or search. The address bar keeps your place, so any view can be bookmarked or shared. <b>Export</b> downloads the current selection as CSV.</li>
+    </ul>
+
+    <h2>The stack</h2>
+    <p>Layers run from the physical base up to components that sit next to applications. Layer 08 holds foundation-model labs and records not yet classified; it is shown but kept out of headline totals.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>#</th><th>Layer</th><th>Segments</th></tr></thead>
+      <tbody>
+        <tr><td>01</td><td>Compute and model serving</td><td>Chips and physical infrastructure; GPU clouds and compute scheduling; Training and post-training platforms; Inference engines and services</td></tr>
+        <tr><td>02</td><td>Data and knowledge infrastructure</td><td>Databases and real-time state; Search, retrieval and knowledge processing; Memory and context</td></tr>
+        <tr><td>03</td><td>Training data and feedback</td><td>Expert, labeling and synthetic data; Agent trajectories and RL environments; Simulation and physical AI data</td></tr>
+        <tr><td>04</td><td>Execution and runtime</td><td>Sandboxes and isolated execution; Browser and computer use; Durable execution and scheduling</td></tr>
+        <tr><td>05</td><td>Development and integration</td><td>Tool connectivity and integration; Agent development frameworks; Workflow and app building</td></tr>
+        <tr><td>06</td><td>Quality, security and control</td><td>Model routing and gateways; Evals, observability and regression; Security, identity and governance</td></tr>
+        <tr><td>07</td><td>Interaction and transaction infrastructure</td><td>Real-time voice and communications; Agent payments and commerce</td></tr>
+        <tr><td>08</td><td>Adjacent platforms and extended products</td><td>Foundation models and open-source ecosystem; Applications and developer entry points; Other discovery records</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>How to read the numbers</h2>
+    <ul>
+      <li><b>This is a research sample, not a census.</b> A company or deal that is missing has not been recorded; it is not a zero.</li>
+      <li><b>Every observation carries its source type</b>, from regulatory filings to third-party estimates. Estimates and media reports are included and labelled, so coverage is broad, but check the linked source before relying on a single figure.</li>
+      <li><b>Funding</b> counts announced equity rounds by announcement date. Total-raised snapshots, debt facilities, IPO proceeds and secondary sales are shown but not counted as new funding.</li>
+      <li><b>Revenue</b> keeps the original basis. ARR, annualized run-rate and recognized revenue are different measures and are labelled. Revenue totals add up the disclosed sample; they are not segment revenue.</li>
+      <li><b>Valuations</b> are shown as medians, never summed.</li>
+      <li><b>M&amp;A</b> counts each deal once, by announcement date. Signing and closing are tracked separately.</li>
+      <li><b>Currency:</b> amounts are in USD. RMB is converted at a fixed 7 CNY/USD and EUR at 1.17 USD/EUR for analysis; these are not historical exchange rates.</li>
+      <li><b>Shares and growth</b> describe the recorded sample. They are not market share, and new disclosures entering the sample are not treated as industry growth.</li>
+    </ul>
+
+    <h2>Where the data comes from</h2>
+    <p>The company list starts from public AI-infrastructure directories and market maps, then is extended by hand. Each financial observation links to the page it came from.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Source type</th><th>Observations</th></tr></thead>
+      <tbody>
+        <tr><td>Regulatory filings</td><td>10</td></tr>
+        <tr><td>Company announcements and disclosures</td><td>305</td></tr>
+        <tr><td>Investor disclosures</td><td>6</td></tr>
+        <tr><td>Media reports</td><td>79</td></tr>
+        <tr><td>Third-party estimates (research firms and directories)</td><td>316</td></tr>
+        <tr><td>Reported funding talks</td><td>4</td></tr>
+      </tbody>
+    </table></div>
+    <p>Operating locations are checked against company sites, job listings and filings; 265 entries have a verified main operating country.</p>
+
+    <h2>Coverage and limits</h2>
+    <ul>
+      <li>175 entries are discovery records that are not yet classified. They stay in the company map but out of the landscape totals.</li>
+      <li>Directory "total raised" figures are third-party and unverified, and can be badly wrong. They are shown on company profiles but never counted as funding.</li>
+      <li>Coverage is strongest for agent and developer infrastructure. Chips, power and data centres are covered only where they bear on that stack.</li>
+      <li>Each company sits in one segment, so multi-product companies are filed under their main business.</li>
+    </ul>
+
+    <h2 id="data">Data</h2>
+    <p>Everything the map shows is available as plain files.</p>
+    <div class="downloads">
+      <a class="btn" href="data/companies.csv" download>companies.csv · 185 KB</a>
+      <a class="btn" href="data/events.csv" download>events.csv · 267 KB</a>
+      <a class="btn" href="data/landscape.json" download>landscape.json · 1.8 MB</a>
+    </div>
+    <ul>
+      <li><code>companies.csv</code>: one row per company or product, with layer, segment, country, product, website and sources.</li>
+      <li><code>events.csv</code>: one row per observation, with type, date, amount in USD millions, basis, status and a source link.</li>
+      <li><code>landscape.json</code>: everything the map uses, including the taxonomy and the research framework.</li>
+    </ul>
+
+    <h2>Corrections</h2>
+    <p>Spotted a wrong figure or a missing company? <a href="https://github.com/clarajzt/ai-infra-landscape/issues" rel="noopener">Open an issue</a> with a link to a public source.</p>
+    <p>This is independent research for information only. It is not investment advice.</p>
+  </main>
+
+  <footer class="site-footer">
+    <a href="./">Map</a><a href="about.html#data">Data</a><a href="https://github.com/clarajzt/ai-infra-landscape" rel="noopener">Source on GitHub</a>
+    <span class="note">Data as of 2026-11-01 · Not investment advice</span>
+  </footer>
+</body>
+</html>

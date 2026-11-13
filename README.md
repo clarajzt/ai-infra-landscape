@@ -1,51 +1,64 @@
 # AI Infrastructure Landscape
 
+**Live:** https://clarajzt.github.io/ai-infra-landscape/
+
 An interactive map of the AI infrastructure stack: 638 companies and products across 8 layers and 24 segments, with 720 sourced observations of funding, revenue, valuation and M&A. Data as of 2026-11-01.
 
-## View the map
+It is built to show where capital, revenue and consolidation are moving in each part of the stack, with every figure traceable to a public source.
 
-Open `index.html` in a browser. It is a single self-contained page: no server, no install, works offline.
+## What's inside
 
-The page has three views:
+| | |
+|---|---|
+| **Market overview** | The stack layer by layer: headline funding, revenue, valuation and M&A, a landscape of leading companies, and a yearly trend. Every number opens the observations behind it. |
+| **Company map** | Every company and product with country, segment, product and its latest public figures. Each company opens its full funding, revenue and deal history. |
+| **Evolution and opportunities** | How each generation of model capability moved the scarce resource, and where the investable seams are. |
+| **About** | The taxonomy, where the data comes from, how to read the numbers, and the downloads. |
 
-- **Market overview:** the landscape by layer, headline figures, and a yearly trend. Every number opens the events behind it.
-- **Company map:** searchable company list with country, segment, product and the latest public figures.
-- **Evolution and opportunities:** how each generation of model capability moved the scarce resource, and where the investable seams are.
+Filters for year, country, layer and segment are kept in the address bar, so any view can be bookmarked or shared.
 
-## Layers
+## The stack
 
 | # | Layer | Segments |
 |---|---|---|
-| 01 | Compute and model serving | Chips and physical infrastructure; GPU clouds and compute scheduling; training and post-training platforms; inference engines and services |
-| 02 | Data and knowledge infrastructure | Databases and real-time state; search, retrieval and knowledge processing; memory and context |
-| 03 | Training data and feedback | Expert, labeling and synthetic data; agent trajectories and RL environments; simulation and physical AI data |
-| 04 | Execution and runtime | Sandboxes and isolated execution; browser and computer use; durable execution and scheduling |
-| 05 | Development and integration | Tool connectivity and integration; agent development frameworks; workflow and app building |
-| 06 | Quality, security and control | Model routing and gateways; evals, observability and regression; security, identity and governance |
-| 07 | Interaction and transaction infrastructure | Real-time voice and communications; agent payments and commerce |
-| 08 | Adjacent platforms and extended products | Foundation models and open-source ecosystem; applications and developer entry points; other discovery records |
-
-## Data files
-
-| File | Contents |
-|---|---|
-| `data/companies.csv` | One row per company or product: layer, segment, country, product, website, sources |
-| `data/events.csv` | One row per observation: type, date, amount in USD millions, basis, status, source link |
-| `data/landscape.json` | Everything the page uses, including the taxonomy and research framework |
+| 01 | Compute and model serving | Chips and physical infrastructure; GPU clouds and compute scheduling; Training and post-training platforms; Inference engines and services |
+| 02 | Data and knowledge infrastructure | Databases and real-time state; Search, retrieval and knowledge processing; Memory and context |
+| 03 | Training data and feedback | Expert, labeling and synthetic data; Agent trajectories and RL environments; Simulation and physical AI data |
+| 04 | Execution and runtime | Sandboxes and isolated execution; Browser and computer use; Durable execution and scheduling |
+| 05 | Development and integration | Tool connectivity and integration; Agent development frameworks; Workflow and app building |
+| 06 | Quality, security and control | Model routing and gateways; Evals, observability and regression; Security, identity and governance |
+| 07 | Interaction and transaction infrastructure | Real-time voice and communications; Agent payments and commerce |
+| 08 | Adjacent platforms and extended products | Foundation models and open-source ecosystem; Applications and developer entry points; Other discovery records |
 
 ## How to read the numbers
 
-- **This is a research sample, not a census.** A company or deal that is missing has not been recorded; it is not a zero.
-- **Every observation carries its source type:** regulatory filing, company disclosure, investor disclosure, media report, third-party estimate, or funding talks. Estimates and reports are included and labelled.
-- **Funding** counts announced equity rounds by announcement date. Total-raised snapshots, debt facilities, IPO proceeds and secondary sales are shown but not counted as new funding.
-- **Revenue** keeps the original basis: ARR, annualized run-rate, and recognized revenue are different things and are labelled as such.
-- **Valuations** are shown as medians, never summed.
-- **Layer 08** (foundation-model labs and unclassified records) is excluded from headline totals, because single rounds there would swamp the infrastructure sample.
-- **Currency:** amounts are in USD. RMB is converted at a fixed 7 CNY/USD and EUR at 1.17 USD/EUR for analysis; these are not historical exchange rates.
-- Many directory-sourced entries are unverified, and third-party "total raised" figures in particular can be wrong. Check the linked source before relying on any single figure.
+- **This is a research sample, not a census.** A missing company or deal has not been recorded; it is not a zero.
+- **Every observation carries its source type,** from regulatory filings to third-party estimates. Estimates and reports are included and labelled.
+- **Funding** counts announced equity rounds by announcement date. Total-raised snapshots, debt facilities, IPO proceeds and secondary sales are not counted as new funding.
+- **Revenue** keeps the original basis: ARR, annualized run-rate and recognized revenue are labelled separately.
+- **Valuations** are medians, never sums. **Layer 08** (foundation-model labs, unclassified records) is kept out of headline totals.
+- Amounts are in USD; RMB is converted at a fixed 7 CNY/USD and EUR at 1.17 USD/EUR for analysis.
+
+## Data
+
+| File | Contents |
+|---|---|
+| [`data/companies.csv`](data/companies.csv) | One row per company or product: layer, segment, country, product, website, sources |
+| [`data/events.csv`](data/events.csv) | One row per observation: type, date, amount in USD millions, basis, status, source link |
+| [`data/landscape.json`](data/landscape.json) | Everything the map uses, including the taxonomy and research framework |
+
+## Run locally
+
+Static files, no build step. The map loads its data with `fetch`, so serve the folder rather than opening the file:
+
+```bash
+python3 -m http.server
+```
+
+Then open the address it prints.
 
 ## Corrections
 
-Corrections and additions are welcome through an issue, with a link to a public source.
+Corrections and additions are welcome as an [issue](https://github.com/clarajzt/ai-infra-landscape/issues), with a link to a public source.
 
-This is independent research for information only and is not investment advice.
+Independent research for information only; not investment advice.

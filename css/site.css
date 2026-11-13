@@ -1,0 +1,38 @@
+/* Site chrome shared by the map and the About page. */
+.top-tabs a{font-size:13px;white-space:nowrap;border-bottom:3px solid transparent;padding:21px 12px 18px;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center}
+.top-tabs a:hover{color:var(--ink);text-decoration:none}
+.top-tabs a.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:650}
+a.brand{color:var(--ink);text-decoration:none}
+.site-footer{max-width:1600px;margin:0 auto;padding:18px 30px 34px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px;color:var(--muted)}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--accent)}
+.site-footer .note{margin-left:auto}
+.loading a{color:var(--accent)}
+
+.about{max-width:860px;margin:0 auto;padding:34px 30px 10px;line-height:1.7}
+.about h1{font-size:30px;line-height:1.2;margin:0 0 10px;letter-spacing:-.01em}
+.about .lede{font-size:16px;color:var(--muted);margin:0 0 26px}
+.about h2{font-size:19px;margin:36px 0 10px;padding-top:6px}
+.about p,.about li{font-size:14px}
+.about ul{padding-left:20px}
+.about li{margin:5px 0}
+.about a{color:var(--accent)}
+.about .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:22px 0 6px}
+.about .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px}
+.about .stat b{display:block;font-size:24px;line-height:1.2;color:var(--ink)}
+.about .stat span{font-size:12px;color:var(--muted)}
+.about table{width:100%;border-collapse:collapse;font-size:13px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.about th,.about td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+.about th{background:var(--wash);font-weight:650}
+.about tr:last-child td{border-bottom:0}
+.about .table-wrap{overflow-x:auto}
+.about .downloads{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.about .cta{display:inline-flex;margin-top:6px}
+
+@media(max-width:760px){
+  .top-tabs a{padding:12px 8px 10px}
+  .about{padding:24px 16px 6px}
+  .about h1{font-size:25px}
+  .site-footer{padding:16px 16px 28px}
+  .site-footer .note{margin-left:0}
+}
